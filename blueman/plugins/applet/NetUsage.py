@@ -374,7 +374,7 @@ class NetUsage(AppletPlugin, gobject.GObject):
                 ls = rfcomm_list()
                 for dev in ls:
                     if dev["id"] == portid:
-                        adapter = self.Applet.Manager.GetAdapter(dev["src"])
+                        adapter = self.Applet.Manager.get_adapter(dev["src"])
                         device = adapter.FindDevice(dev["dst"])
                         device = Device(device)
 
